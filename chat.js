@@ -11,7 +11,7 @@ document.getElementsByTagName('head')[0].appendChild(script);
 
 var needsUpdate = true;
 var numLines = 0;
-var file = null;
+var file = "log.txt";
 var message = "";
 
 function Log()
@@ -24,28 +24,29 @@ function sendInfo(message, username)
 {
     updateLog();
     $.ajax(
-        {
+            {
             type: "POST",
             url: "chathost.php",
-            data: {"function" : 'send', 'message': message, "username":username, 'file': file},
+            data: {"function" : 'send', 'message': message, "username":username, 'file': "log.txt"},
             dataType: 'json',
             success: function(data){
                 updateLog();
             }
-        }
+            }
 
     )
 }
 
 function updateLog()
 {
+    // var file = "log.txt";
     if(needsUpdate)
     {
         $.ajax(
             {
                 type: "POST",
                 url: "chathost.php",
-                data: {'function': 'update', 'numLines': numLines, 'file': file },
+                data: {'function': 'update', 'numLines': numLines, 'file': "log.txt" },
                 dataType: "json",
                 success: function(data)
                 {
