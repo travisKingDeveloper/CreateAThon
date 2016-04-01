@@ -4,43 +4,42 @@
 
 <body onload="setInterval('chat.update()', 1000)">
 <h2> Chat </h2>
-
+<p>PlaceHolder:</p>
 <div id="log">
-    <p>PlaceHolder:</p>
+
 </div>
+<p>PlaceHolder:</p>
 
 <form>
     <textarea id="sent" name="sent" maxlength="255"></textarea>
 </form>
-
 
 <script>
     var username = 'Andrew';
 
     var chat = new Log();
 
-    $('')
-
-//    // watch textarea for key presses
-//    $("#sent").keydown(function(event) {
-//        alert("keydown");
-//        var key = event.which;
+    
+//        // watch textarea for key presses
+//        $("#sent").keydown(function(event) {
+//            alert("keydown");
+//            var key = event.which;
 //
-//        //all keys including return.
-//        if (key >= 33) {
+//            //all keys including return.
+//            if (key >= 33) {
 //
-//            var maxLength = $(this).attr("maxlength");
-//            var length = this.value.length;
+//                var maxLength = $(this).attr("maxlength");
+//                var length = this.value.length;
 //
-//            // don't allow new content if length is maxed out
-//            if (length >= maxLength) {
-//                event.preventDefault();
+//                // don't allow new content if length is maxed out
+//                if (length >= maxLength) {
+//                    event.preventDefault();
+//                }
 //            }
-//        }
-//    });
+//        });
     // watch textarea for release of key press
-    $('#sent').keyup(function(e) {
-
+    $('#sent').keydown(function(e) {
+//        alert('keyup');
         if (e.keyCode == 13) {
 
             var text = $(this).val();
@@ -49,7 +48,8 @@
 
             // send
             if (length <= maxLength + 1) {
-                chat.send(text, name);
+                chat.send(text, username);
+                alert("Sent");
                 $(this).val("");
             } else {
                 $(this).val(text.substring(0, maxLength));
@@ -57,8 +57,8 @@
         }
     });
 
-
 </script>
 
+</body>
 
 </html>

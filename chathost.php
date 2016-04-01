@@ -24,8 +24,8 @@ switch($function)
             fclose($logFile);
             $lines = file("log.txt");
         }
-        var_dump($file);
-        var_dump($lines);
+//        var_dump($file);
+//        var_dump($lines);
 
         $count = count($lines);
 
@@ -48,6 +48,22 @@ switch($function)
             }
 
             $log['text'] = $text;
+            
         }
     }break;
+
+    case('send'):
+    {
+        $username = "PLACEHOLDER";
+        $message = htmlentities($_POST['message']);
+        if(strcmp($message, "\n") == 0)
+        {
+            $message = str_replace("\n", " ", $message);
+            $fileHandle = fopen("log.txt", "a") or die("Failed to open file");
+            fwrite($fileHandle, "<span>" . $username . "</span>" . $message );
+            fclose($fileHandle);
+        }
+    }break;
+
+    json_encode($log);
 }

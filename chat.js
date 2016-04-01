@@ -33,6 +33,7 @@ function sendInfo()
                 updateLog();
             }
         }
+
     )
 }
 
@@ -57,7 +58,7 @@ function updateLog()
                     }
 
                     document.getElementById('log').scrollTop = document.getElementsByName('log').scrollHeight;
-
+                    
   // '#log'.scrollTop = $('#log').scrollHeight;
                     needsUpdate = false;
                     numLines = data.numLines;
