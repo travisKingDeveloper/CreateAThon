@@ -20,7 +20,7 @@ this.update = updateLog;
 this.send = sendInfo;
 }
 
-function sendInfo()
+function sendInfo(message, username)
 {
     updateLog();
     $.ajax(

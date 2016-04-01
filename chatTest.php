@@ -2,7 +2,7 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 <script type="text/javascript" src="chat.js"></script>
 
-<body onload="setInterval('chat.update()', 1000)">
+<body onload="setInterval('chat.update()', 5000)">
 <h2> Chat </h2>
 <p>PlaceHolder:</p>
 <div id="log">
@@ -19,40 +19,23 @@
 
     var chat = new Log();
 
-    
-//        // watch textarea for key presses
-//        $("#sent").keydown(function(event) {
-//            alert("keydown");
-//            var key = event.which;
-//
-//            //all keys including return.
-//            if (key >= 33) {
-//
-//                var maxLength = $(this).attr("maxlength");
-//                var length = this.value.length;
-//
-//                // don't allow new content if length is maxed out
-//                if (length >= maxLength) {
-//                    event.preventDefault();
-//                }
-//            }
-//        });
-    // watch textarea for release of key press
     $('#sent').keydown(function(e) {
 //        alert('keyup');
-        if (e.keyCode == 13)
-        {
-            var text = $(this).val();
-            var maxLength = $(this).attr("maxlength");
+        if (e.keyCode == 13) {
+
+            var text = $('#sent').val();
+            console.log()
+            var maxLength = $('#sent').attr("maxlength");
             var length = text.length;
 
             // send
             if (length <= maxLength + 1) {
                 chat.send(text, username);
-                alert("Sent");
+
+                alert(text);
                 $(this).val("");
             } else {
-                $(this).val(text.substring(0, maxLength));
+                chat.send ($(this).val(text.substring(0, maxLength)));
             }
         }
     });
