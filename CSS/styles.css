@@ -113,6 +113,20 @@ body
     outline: none;
 }
 
+.logoutLink
+{
+    background-color: transparent;
+    font-weight: bold;
+    border: none;
+    color: #FF0300;
+    cursor: pointer;
+}
+
+.logoutLink:focus
+{
+    outline: none;
+}
+
 #login
 {
     background: #013f70;
@@ -133,4 +147,17 @@ body
 #loginForm
 {
     padding: 3px;
+}
+
+#loginForm a
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    color: #E7EAEF;
+    text-decoration: none;
+}
+
+#loginForm a:hover
+{
+    text-decoration: underline;
 }

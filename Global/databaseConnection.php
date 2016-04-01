@@ -19,7 +19,7 @@ function GetDatabaseConnection()
 
     if ($conn->connect_error)
     {
-        die("Connection faliled");
+        die("Connection failed");
     }
 
     return $conn;
