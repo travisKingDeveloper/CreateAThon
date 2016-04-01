@@ -25,7 +25,8 @@ $port = '22';
 $pass ='MomDadKelly5512';
 $user ='n00787683';
 
-$connection = ssh2_connect($host, 22);
+if(function_exists("ssh2_connect"))
+    $connection = ssh2_connect($host, 22);
 
 $success = ssh2_auth_password($connection, $user, $pass);
 

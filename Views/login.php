@@ -1,7 +1,9 @@
 <?php
-echo file_get_contents("../global/RedirectLogin.php");
-echo file_get_contents("../global/databaseConnection.php");
-echo file_get_contents("../global/header.php");
+
+include("../global/RedirectLogin.php");
+include("../global/databaseConnection.php");
+include("../global/header.php");
+
 ?>
 <div id="login">
     <form method="post" id="loginForm">
