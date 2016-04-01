@@ -1,0 +1,33 @@
+body
+{
+    margin: 0;
+}
+
+#header
+{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #013f70;
+    background: -moz-linear-gradient(left,  #013f70 17%, #1f89c5 82%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(17%,#013f70), color-stop(82%,#1f89c5));
+    background: -webkit-linear-gradient(left,  #013f70 17%,#1f89c5 82%);
+    background: -o-linear-gradient(left,  #013f70 17%,#1f89c5 82%);
+    background: -ms-linear-gradient(left,  #013f70 17%,#1f89c5 82%);
+    background: linear-gradient(to right,  #013f70 17%,#1f89c5 82%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#013f70', endColorstr='#1f89c5',GradientType=1 );
+}
+
+#header #logo
+{
+    padding: 8px;
+    min-width: 230px;
+    z-index: 1 !important;
+}
+
+#header .wings
+{
+    margin: 0 auto; background: url(../image/UNFwings.png) no-repeat 500px 0px; min-height: 110px; width: 80%;
+}
+
+/*#header .wings h1 {bottom: 0px;}*/
