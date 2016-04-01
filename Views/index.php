@@ -1,5 +1,5 @@
 <?php
-echo file_get_contents("../global/header.php");
+echo file_get_contents("../global/header2.php");
 ?>
 <div id="chat">
 <table>
@@ -14,17 +14,11 @@ echo file_get_contents("../global/header.php");
             <form method="post">
                 <input type="submit" class="submitLink" value="Crossings">
             </form>
-            <form action="login.php" style="margin-top: 20%;">
-                <input type="submit" class="logoutLink" value="Logout">
-            </form>
         </td>
         <td style="height: 70%;">
             <form style="padding: 0; height: 100%; width: 100%;">
                 <textarea style="width:100%; height:100%;" placeholder="Chat will appear here." disabled></textarea>
             </form>
-        </td>
-        <td rowspan="2" style="width:25%;">
-            filler 3
         </td>
     </tr>
     <tr>
