@@ -1,3 +1,5 @@
+/*Some elements taken from unf.edu and associated pages.*/
+
 body
 {
     margin: 0;
@@ -30,4 +32,38 @@ body
     margin: 0 auto; background: url(../image/UNFwings.png) no-repeat 500px 0px; min-height: 110px; width: 80%;
 }
 
-/*#header .wings h1 {bottom: 0px;}*/
+#body
+{
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#links
+{
+    height: 30px;
+    background: linear-gradient(to bottom, #707577 17%,#8a8d94 82%);
+    margin: 0;
+    padding: 0;
+}
+
+#links ul
+{
+    margin: 0;
+    text-align: center;
+    padding-top: 5px;
+}
+
+#links ul li
+{
+    display: inline;
+    margin: 2px;
+}
+
+#links ul li a
+{
+    text-decoration: none;
+    color: white;
+    padding: 3px;
+    margin: 3px;
+}
