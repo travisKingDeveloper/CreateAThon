@@ -2,6 +2,8 @@
 
 body
 {
+    background-color: #bfbfbf;
+    color: white;
     margin: 0;
 }
 
@@ -17,7 +19,7 @@ body
     background: -o-linear-gradient(left,  #013f70 17%,#1f89c5 82%);
     background: -ms-linear-gradient(left,  #013f70 17%,#1f89c5 82%);
     background: linear-gradient(to right,  #013f70 17%,#1f89c5 82%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#013f70', endColorstr='#1f89c5',GradientType=1 );
+    border-top: solid 1px black;
 }
 
 #header #logo
@@ -45,6 +47,8 @@ body
     background: linear-gradient(to bottom, #707577 17%,#8a8d94 82%);
     margin: 0;
     padding: 0;
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
 }
 
 #links ul
@@ -64,6 +68,69 @@ body
 {
     text-decoration: none;
     color: white;
-    padding: 3px;
+    padding: 3px 5%;
     margin: 3px;
+}
+
+#chat table, #chat table tr td
+{
+    border: solid 1px black;
+}
+
+#chat table
+{
+    border-collapse: collapse;
+    margin: 1% auto;
+    width: 80%;
+    height: 70%;
+    text-align: center;
+}
+
+#chat table tr td
+{
+    padding: 0;
+    margin: 0;
+}
+
+#chat table tr td form
+{
+    padding: 0;
+    margin: 0;
+}
+
+
+.submitLink
+{
+    background-color: transparent;
+    text-decoration: none;
+    border: none;
+    color: blue;
+    cursor: pointer;
+}
+
+.submitLink:focus
+{
+    outline: none;
+}
+
+#login
+{
+    background: #013f70;
+    background: -moz-linear-gradient(top,  #013f70 17%, #1f89c5 82%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(17%,#013f70), color-stop(82%,#1f89c5));
+    background: -webkit-linear-gradient(top,  #013f70 17%,#1f89c5 82%);
+    background: -o-linear-gradient(top,  #013f70 17%,#1f89c5 82%);
+    background: -ms-linear-gradient(top,  #013f70 17%,#1f89c5 82%);
+    background: linear-gradient(top,  #013f70 17%,#1f89c5 82%);
+    border-radius: 15px;
+    width: 40%;
+    text-align: center;
+    margin: 5% auto;
+    padding: 1%;
+    border: solid 1px black;
+}
+
+#loginForm
+{
+    padding: 3px;
 }
