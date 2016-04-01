@@ -40,8 +40,8 @@
     // watch textarea for release of key press
     $('#sent').keydown(function(e) {
 //        alert('keyup');
-        if (e.keyCode == 13) {
-
+        if (e.keyCode == 13)
+        {
             var text = $(this).val();
             var maxLength = $(this).attr("maxlength");
             var length = text.length;
