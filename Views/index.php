@@ -1,5 +1,4 @@
 <?php
-include './../Global/RedirectLogin.php';
 echo file_get_contents("../global/header.php");
 ?>
 <div id="chat">

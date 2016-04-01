@@ -24,7 +24,6 @@ session_start();
 </div>
 <div id="links">
     <ul>
-        <li><a href="../views/login.php">LOGIN</a></li>
-        <li><a href="../views/register.php">REGISTER</a></li>
+        <li><a href="">LOGOUT</a></li>
     </ul>
 </div>
