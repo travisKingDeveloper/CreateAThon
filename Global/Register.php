@@ -6,11 +6,11 @@
  * Time: 4:23 PM
  */
 include 'databaseConnection.php';
-//if ($_SERVER["REQUEST_METHOD"] != "POST")
- //   header( "Location: LoginView.php");
+if ($_SERVER["REQUEST_METHOD"] != "POST")
+    header( "Location: LoginView.php");
 
-$username = 'TraviKing';//$_REQUEST['UserName'];
-$password = 'asdf'; //$_REQUEST['Password'];
+$username = $_REQUEST['UserName'];
+$password = $_REQUEST['Password'];
 $conn = GetDatabaseConnection();
 $sql = "CALL addUser('".strval($username)."', '".$password."');";
 $t2 = $conn->query($sql);

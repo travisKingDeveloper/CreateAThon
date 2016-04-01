@@ -10,6 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] != "POST")
     header( "Location: ./../Views/login.php");
 
 include 'databaseConnection.php';
+
 $username = $_REQUEST['UserName'];
 $password = $_REQUEST['Password'];
 $conn = GetDatabaseConnection();
