@@ -11,5 +11,5 @@ session_start();
 if(!(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true))
 {
     $_SESSION['error'] = "Please Log In";
-    header( "Location: ./login.php" );
+    header( "Location: ./../Views/login.php" );
 }
