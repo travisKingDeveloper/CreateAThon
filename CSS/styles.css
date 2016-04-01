@@ -137,7 +137,6 @@ body
     background: -ms-linear-gradient(top,  #013f70 17%,#1f89c5 82%);
     background: linear-gradient(top,  #013f70 17%,#1f89c5 82%);
     border-radius: 15px;
-    width: 40%;
     text-align: center;
     margin: 5% auto;
     padding: 1%;
@@ -146,7 +145,8 @@ body
 
 #loginForm
 {
-    padding: 3px;
+    margin: 0 auto;
+    padding: 0 5%;
 }
 
 #loginForm a
@@ -160,4 +160,16 @@ body
 #loginForm a:hover
 {
     text-decoration: underline;
+}
+
+#loginTable
+{
+    margin: 0 auto;
+}
+
+#loginTable tr td
+{
+    height: 100%;
+    width: 40%;
+    padding: 10%;
 }
