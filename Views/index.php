@@ -19,7 +19,9 @@ echo file_get_contents("../global/header.php");
             </form>
         </td>
         <td style="height: 70%;">
-            filler 2
+            <form style="padding: 0; height: 100%; width: 100%;">
+                <textarea style="width:100%; height:100%;" placeholder="Chat will appear here." disabled></textarea>
+            </form>
         </td>
         <td rowspan="2" style="width:25%;">
             filler 3

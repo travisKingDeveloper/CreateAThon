@@ -141,6 +141,7 @@ body
     margin: 5% auto;
     padding: 1%;
     border: solid 1px black;
+    width: 30%;
 }
 
 #loginForm
@@ -162,7 +163,7 @@ body
     text-decoration: underline;
 }
 
-#loginTable
+/*#loginTable
 {
     margin: 0 auto;
 }
@@ -172,4 +173,4 @@ body
     height: 100%;
     width: 40%;
     padding: 10%;
-}
+}*/
