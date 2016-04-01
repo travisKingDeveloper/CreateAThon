@@ -17,8 +17,8 @@ switch($function)
         {
             $lines = file("log.txt");
         }
-        else{
-
+        else
+        {
             $logFile = fopen("newfile.txt", "w") or die("Could not create file");
             fwrite($logFile, "test line\n");
             fclose($logFile);
@@ -50,7 +50,8 @@ switch($function)
             $log['text'] = $text;
             
         }
-    }break;
+    }
+        break;
 
     case('send'):
     {
