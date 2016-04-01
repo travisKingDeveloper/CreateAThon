@@ -17,19 +17,49 @@ echo file_get_contents("../global/header2.php");
         </td>
         <td style="height: 70%;">
             <form style="padding: 0; height: 100%; width: 100%;">
-                <textarea style="width:100%; height:100%;" placeholder="Chat will appear here." disabled></textarea>
+                <textarea id='chat' style="width:100%; height:100%;" ></textarea>
             </form>
         </td>
     </tr>
     <tr>
         <td style="height: 30%; padding: 0;">
             <form style="padding: 0; height: 100%; width: 100%;">
-                <textarea style="width:100%; height:100%;" placeholder="Type here and press enter to chat."></textarea>
+                <textarea id='sent' style="width:100%; height:100%;" placeholder="Type here and press enter to chat."></textarea>
             </form>
         </td>
     </tr>
 </table>
 </div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+    var username = 'Andrew';
+
+    $('#sent').keydown(function(e) {
+//        alert('keyup');
+        if (e.keyCode == 13) {
+
+            var text = $('#chat').val();
+            text.concat($('#sent').val());
+            var maxLength = $('#sent').attr("maxlength");
+            var length = text.length;
+
+            // send
+            if (length <= maxLength + 1) {
+                $('#chat').val(text);
+//                $('#chat').val($('#chat').val() + text);
+            } else {
+                $('#chat').val(text);
+//                val.concat(text);
+            }
+
+            $('#sent').val("");
+        }
+    });
+
+    setTimeout(function(){
+        window.location.reload(1);
+    }, 5000);
+</script>
 
 </body>
 </html>

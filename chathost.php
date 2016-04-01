@@ -5,8 +5,13 @@
  * Date: 4/1/2016
  * Time: 12:58 PM
  */
+if(isset($_POST['function'])) {
+    $function = $_POST['function'];
+}
+else
+    $function = "def";
 
-$function = $_POST['function'];
+$log = array();
 
 switch($function)
 {
@@ -17,9 +22,9 @@ switch($function)
         {
             $lines = file("log.txt");
         }
-        else
-        {
-            $logFile = fopen("newfile.txt", "w") or die("Could not create file");
+        else{
+
+            $logFile = fopen("log.txt", "a") or die("Could not create file");
             fwrite($logFile, "test line\n");
             fclose($logFile);
             $lines = file("log.txt");
@@ -29,13 +34,13 @@ switch($function)
 
         $count = count($lines);
 
-        if ($numLines == count($lines))
-        {
-            $log['numLines'] = $numLines;
-            $log['text'] = false;
-        }
-        else
-        {
+//        if ($numLines == count($lines))
+//        {
+//            $log['numLines'] = $numLines;
+//            $log['text'] = false;
+//        }
+//        else
+//        {
             $text = array();
             //$numNewLines = $state + $count - $state;
             foreach($lines as $index => $line)
@@ -48,22 +53,23 @@ switch($function)
             }
 
             $log['text'] = $text;
+
             
-        }
-    }
-        break;
+//        }
+    }break;
 
     case('send'):
     {
         $username = "PLACEHOLDER";
         $message = htmlentities($_POST['message']);
-        if(strcmp($message, "\n") == 0)
-        {
+//        if(strcmp($message, "\n") != 0)
+//        {
             $message = str_replace("\n", " ", $message);
             $fileHandle = fopen("log.txt", "a") or die("Failed to open file");
             fwrite($fileHandle, "<span>" . $username . "</span>" . $message );
+            fflush($fileHandle);
             fclose($fileHandle);
-        }
+//        }
     }break;
 
     json_encode($log);
