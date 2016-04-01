@@ -1,6 +1,6 @@
 <?php
-echo file_get_contents("./RedirectLogin.php");
-echo file_get_contents("./databaseConnection.php");
+echo file_get_contents("../global/RedirectLogin.php");
+echo file_get_contents("../global/databaseConnection.php");
 echo file_get_contents("../global/header.php");
 ?>
 <div id="chat">

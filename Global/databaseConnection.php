@@ -17,7 +17,7 @@ function GetDatabaseConnection()
 //Create the connection variable
     $conn = new mysqli($localHost, $user, $password, $databaseName);
 
-    if ($conn->connect_error)
+    if ($conn -> connect_error)
     {
         die("Connection failed");
     }
