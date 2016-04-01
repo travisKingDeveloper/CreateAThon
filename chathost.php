@@ -18,11 +18,14 @@ switch($function)
             $lines = file("log.txt");
         }
         else{
+
             $logFile = fopen("newfile.txt", "w") or die("Could not create file");
             fwrite($logFile, "test line\n");
             fclose($logFile);
             $lines = file("log.txt");
         }
+        var_dump($file);
+        var_dump($lines);
 
         $count = count($lines);
 
