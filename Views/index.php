@@ -17,7 +17,7 @@ echo file_get_contents("../global/header2.php");
         </td>
         <td style="height: 70%;">
             <form style="padding: 0; height: 100%; width: 100%;">
-                <textarea id='chat' style="width:100%; height:100%;" ></textarea>
+                <textarea id='chat' style="width:100%; height:100%;">n00253894: Hey, anyone there?&#13;&#13;n00884928: Yea, I'm here.&#13;&#13;n00253894: You doing anything?&#13;&#13;n00884928: Yea, wanna come over and see?&#13;&#13;n00253894: Sure, I'm on my way.</textarea>
             </form>
         </td>
     </tr>
