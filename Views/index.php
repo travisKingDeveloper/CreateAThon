@@ -1,4 +1,6 @@
 <?php
+echo file_get_contents("./RedirectLogin.php");
+echo file_get_contents("./databaseConnection.php");
 echo file_get_contents("../global/header.php");
 ?>
 <div id="chat">
@@ -14,8 +16,8 @@ echo file_get_contents("../global/header.php");
             <form method="post">
                 <input type="submit" class="submitLink" value="Crossings">
             </form>
-            <form action="index.php">;
-                <input type="submit" value="Logout">
+            <form action="login.php" style="margin-top: 20%;">
+                <input type="submit" class="logoutLink" value="Logout">
             </form>
         </td>
         <td style="height: 70%;">
