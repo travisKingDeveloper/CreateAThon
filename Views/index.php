@@ -1,4 +1,5 @@
 <?php
+include '../Global/RedirectLogin.php';
 echo file_get_contents("../global/header2.php");
 ?>
 <div id="chat">
@@ -16,7 +17,6 @@ echo file_get_contents("../global/header2.php");
             </form>
         </td>
         <td style="height: 70%;">
-            <form style="padding: 0; height: 100%; width: 100%;">
                 <textarea id='chat' style="width:100%; height:100%;" ></textarea>
             </form>
         </td>
