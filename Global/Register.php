@@ -5,16 +5,15 @@
  * Date: 4/1/2016
  * Time: 4:23 PM
  */
+include 'databaseConnection.php';
+//if ($_SERVER["REQUEST_METHOD"] != "POST")
+ //   header( "Location: LoginView.php");
 
-if ($_SERVER["REQUEST_METHOD"] != "POST")
-    header( "Location: LoginView.php");
-
-$username = $_REQUEST['UserName'];
-$password = $_REQUEST['Password'];
+$username = 'TraviKing';//$_REQUEST['UserName'];
+$password = 'asdf'; //$_REQUEST['Password'];
 $conn = GetDatabaseConnection();
-$conn->query("SET @msg = FALSE");
-$conn->query("CALL verifyUser(".strval($username).", ".$password.", @msg);");
-$res = $conn->query("SELECT @msg AS _p_out");
+$sql = "CALL addUser('".strval($username)."', '".$password."');";
+$t2 = $conn->query($sql);
 $row = $res->fetch_assoc();
 $conn->close();
 
