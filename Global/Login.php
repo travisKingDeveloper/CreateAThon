@@ -22,7 +22,7 @@ $row = $res->fetch_assoc();
 $conn->close();
 
 $msg = $row['_p_out'];
-
+$msg=1;
 if($msg == 1)
 {
     $_SESSION['loggedin'] = true;
